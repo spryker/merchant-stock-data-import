@@ -29,9 +29,6 @@ class MerchantStockDataImportConfig extends DataImportConfig
         return $this->buildImporterConfiguration($moduleDataImportDirectory . 'merchant_stock.csv', static::IMPORT_TYPE_MERCHANT_STOCK);
     }
 
-    /**
-     * @return string
-     */
     protected function getModuleRoot(): string
     {
         $moduleRoot = realpath(

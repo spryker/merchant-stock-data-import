@@ -12,17 +12,11 @@ use Orm\Zed\MerchantStock\Persistence\SpyMerchantStockQuery;
 
 class MerchantStockDataImportHelper extends Module
 {
-    /**
-     * @return void
-     */
     public function ensureDatabaseTableIsEmpty(): void
     {
         SpyMerchantStockQuery::create()->deleteAll();
     }
 
-    /**
-     * @return void
-     */
     public function assertDatabaseTableContainsData(): void
     {
         $merchantStockQuery = SpyMerchantStockQuery::create();

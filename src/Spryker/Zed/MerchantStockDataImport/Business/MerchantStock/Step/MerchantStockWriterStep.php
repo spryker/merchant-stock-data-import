@@ -14,11 +14,6 @@ use Spryker\Zed\MerchantStockDataImport\Business\MerchantStock\DataSet\MerchantS
 
 class MerchantStockWriterStep implements DataImportStepInterface
 {
-    /**
-     * @param \Spryker\Zed\DataImport\Business\Model\DataSet\DataSetInterface $dataSet
-     *
-     * @return void
-     */
     public function execute(DataSetInterface $dataSet): void
     {
         $idMerchant = $dataSet[MerchantStockDataSetInterface::MERCHANT_ID];
@@ -33,9 +28,6 @@ class MerchantStockWriterStep implements DataImportStepInterface
         $merchantStockEntity->save();
     }
 
-    /**
-     * @return \Orm\Zed\MerchantStock\Persistence\SpyMerchantStockQuery
-     */
     protected function createMerchantStockQuery(): SpyMerchantStockQuery
     {
         return SpyMerchantStockQuery::create();

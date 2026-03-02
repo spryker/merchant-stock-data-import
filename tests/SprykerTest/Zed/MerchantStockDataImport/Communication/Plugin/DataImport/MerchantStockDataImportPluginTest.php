@@ -35,9 +35,6 @@ class MerchantStockDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsData(): void
     {
         // Arrange
@@ -60,18 +57,12 @@ class MerchantStockDataImportPluginTest extends Unit
         $this->tester->assertDatabaseTableContainsData();
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         $merchantStockDataImportPlugin = new MerchantStockDataImportPlugin();
         $this->assertSame(MerchantStockDataImportConfig::IMPORT_TYPE_MERCHANT_STOCK, $merchantStockDataImportPlugin->getImportType());
     }
 
-    /**
-     * @return void
-     */
     protected function createMerchantStockRelatedData(): void
     {
         $this->tester->haveMerchant([MerchantTransfer::MERCHANT_REFERENCE => 'merchant-test-reference-1']);

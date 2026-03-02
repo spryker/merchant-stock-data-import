@@ -22,11 +22,6 @@ use Spryker\Zed\MerchantStockDataImport\Business\MerchantStock\Step\StockNameToI
  */
 class MerchantStockDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @param \Generated\Shared\Transfer\DataImporterConfigurationTransfer|null $dataImporterConfigurationTransfer
-     *
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getMerchantStockDataImporter(
         ?DataImporterConfigurationTransfer $dataImporterConfigurationTransfer = null
     ): DataImporterInterface {
@@ -45,25 +40,16 @@ class MerchantStockDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantReferenceToIdMerchantStep(): DataImportStepInterface
     {
         return new MerchantReferenceToIdMerchantStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createStockNameToIdStockStep(): DataImportStepInterface
     {
         return new StockNameToIdStockStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createMerchantStockWriterStep(): DataImportStepInterface
     {
         return new MerchantStockWriterStep();
