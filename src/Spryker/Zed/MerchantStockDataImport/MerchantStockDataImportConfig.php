@@ -13,6 +13,8 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class MerchantStockDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_MERCHANT_STOCK = 'merchant-stock';
